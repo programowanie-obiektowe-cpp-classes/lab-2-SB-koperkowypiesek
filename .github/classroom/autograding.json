@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Zad 1",
+      "setup": "mkdir -p build && cd build && cmake .. && make zad1 && chmod +x zad1",
+      "run": "cd build && ./zad1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Zad 2",
+      "setup": "mkdir -p build && cd build && cmake .. && make zad2 && chmod +x zad2",
+      "run": "cd build && ./zad2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}
