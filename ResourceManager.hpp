@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Resource.hpp"
-#include "iostream"
+#include <cstring>
+#include <iostream>
 
 class ResourceManager
 {
@@ -13,14 +14,14 @@ public:
     ResourceManager(const ResourceManager& resource_men)
         : r{(Resource*)memcpy(new Resource, resource_men.r, sizeof(*resource_men.r))}
     {
-        std::cout << "konstruktor kopiujajacy\n";
+        //  std::cout << "konstruktor kopiujajacy\n";
     }
 
     ~ResourceManager() { delete r; }
 
     ResourceManager& operator=(const ResourceManager& reMen)
     {
-        std::cout << "przypisanie\n";
+        // std::cout << "przypisanie\n";
         if (&reMen == this) {
             return *this;
         }
