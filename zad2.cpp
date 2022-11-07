@@ -13,6 +13,16 @@ TEST_CASE("copy semantics", "[]")
         ResourceManager rm3;
         rm3 = rm2;
         REQUIRE(rm1.get() == rm3.get());
+        // test extention:
+        ResourceManager rm4, rm5;
+        ResourceManager rm6{rm5};
+        rm5 = rm4;
+        REQUIRE(rm4.get() == rm5.get());
+        //  nie wiem jak ale chce sprawdzic czy bo przypisaniu do rm5 rm4 rm6 nadal ma dostep do
+        //  obiektu:
+        REQUIRE_NOTHROW(rm6.get());
+        rm5 = rm5;
+        REQUIRE_NOTHROW(rm5.get());
     }
     REQUIRE(ConstructionTracker::live == 0);
 }
