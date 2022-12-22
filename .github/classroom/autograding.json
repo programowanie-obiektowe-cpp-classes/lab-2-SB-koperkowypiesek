@@ -19,6 +19,16 @@
       "comparison": "included",
       "timeout": 10,
       "points": 2
+    },
+    {
+      "name": "Zad 3",
+      "setup": "mkdir -p build && cd build && cmake .. && make zad3 && chmod +x zad3",
+      "run": "cd build && ./zad3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
     }
   ]
 }
